@@ -1,0 +1,73 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This is a Slidev presentation project for the HALO-40 symposium (International Symposium Commemorating the 40th Anniversary of the Halo Nuclei). The project includes a custom Slidev theme called `nucl-th` designed for academic presentations in nuclear physics.
+
+## Key Commands
+
+### Development
+- `npm run dev` - Start development server from root (uses ./nucl-th theme)
+- `cd nucl-th && npm run dev` - Start development server from theme directory (recommended for theme development)
+- `cd nucl-th && npx slidev slides.md --open` - Run specific slides file from theme directory
+
+### Build and Export
+- `npm run build` - Build presentation for production
+- `npm run export` - Export slides to PDF
+- `cd nucl-th && npm run screenshot` - Export slides as PNG images
+
+## Architecture
+
+### Theme Structure (`./nucl-th/`)
+The custom `nucl-th` theme provides academic presentation styling with these key components:
+
+- **`index.ts`** - Main theme entry point that imports styles
+- **`styles/index.ts`** - Style imports (fonts, layout CSS)
+- **`styles/layout.css`** - Main theme styling with academic color scheme and typography
+- **`layouts/`** - Vue layout components:
+  - `cover.vue` - Title slide with author affiliations and meeting info
+  - `default.vue` - Standard slide layout with bottom bar
+  - `intro.vue` - Introduction slide layout
+- **`components/`** - Reusable Vue components:
+  - `BarBottom.vue` - Bottom navigation bar with author, title, meeting info
+  - `TextBox.vue` - Styled content boxes for highlights
+
+### Author Format
+The theme supports a custom author format for academic presentations:
+```yaml
+authors: 
+  - "Author Name": ["Affiliation 1", "Affiliation 2"]
+```
+
+### Meeting Configuration
+Two meeting fields are supported:
+- `meeting` - Full meeting name (displayed on cover slide)
+- `meetingShort` - Short name (displayed in bottom bar, e.g., "HALO-40")
+
+### Color Scheme
+- Primary: `#0FA3B1` (teal blue)
+- Secondary: `#4EC5D4` (light blue)
+- Accent: `#146b8c` (dark blue)
+- Meeting text: `#B8860B` (dark golden rod)
+
+### Fonts
+- Sans: Inter (body text, UI elements)
+- Serif: Crimson Pro (headings, formal text)
+- Mono: JetBrains Mono (code blocks)
+
+## Development Notes
+
+### Theme Loading
+- When developing the theme itself, work from the `nucl-th/` directory
+- The theme uses relative imports and expects to be run from its own directory for proper asset loading
+- Logo file is located at `nucl-th/logo.png`
+
+### CSS Customizations
+- Content positioning can be adjusted via `.slidev-layout` padding and h1 margins in `layout.css`
+- Bottom bar styling is in `BarBottom.vue` component
+- Cover slide styling is in the `.slidev-layout.cover` section of `layout.css`
+
+### Slide Content
+Main presentation content is in `slides.md` at the project root, configured to use the `./nucl-th` theme.

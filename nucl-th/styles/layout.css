@@ -36,6 +36,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative; /* Enable positioning for subtitle */
+  padding-top: 0;
 }
 
 .slidev-layout h1 {
@@ -44,9 +45,8 @@
   font-size: 3rem; /* ~48px */
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-top: 0; /* Reset to normal positioning */
+  margin-top: -0.65rem;
   margin-bottom: 1.5rem;
-  padding-top: 1rem; /* Move content down from top instead */
 }
 
 .slidev-layout h2 {
@@ -115,7 +115,7 @@
   @apply h-full grid;
 
   h1 {
-    font-size: 3.5rem; /* ~56px - impactful but fits better */
+    font-size: 2.75rem; /* ~44px - smaller and more readable */
     font-family: var(--slidev-font-serif);
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -141,18 +141,36 @@
   .meeting {
     font-size: 1.75rem; /* ~28px */
     margin-bottom: 1.5rem;
-    opacity: 0.85;
+    opacity: 0.9;
     font-family: var(--slidev-font-serif);
     font-weight: 500;
     font-style: italic;
+    color: #B8860B; /* Dark golden rod - elegant and readable */
   }
 
   .authors {
     font-size: 1.375rem; /* ~22px */
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-family: var(--slidev-font-sans);
     font-weight: 500;
     line-height: 1.4;
+  }
+
+  .affiliations {
+    font-size: 1rem; /* ~16px */
+    margin-bottom: 1.5rem;
+    font-family: var(--slidev-font-sans);
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.85;
+  }
+
+  .affiliation-item {
+    margin-bottom: 0.25rem;
+  }
+
+  .affiliation-item sup {
+    margin-right: 0.25rem;
   }
 
   .date {

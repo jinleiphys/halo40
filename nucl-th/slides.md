@@ -4,7 +4,7 @@ layout: cover
 title: Nuclear Theory Research
 authors: 
   - "Jin Lei": ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."]
-meeting: "International Conference on Nuclear Physics"
+meeting: "International Symposium Commemorating the 40th Anniversary of the Halo Nuclei (HALO-40) will be held in Beijing on October 12–18, 2025."
 # preTitle: "Advances in"
 ---
 

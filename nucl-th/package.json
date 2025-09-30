@@ -2,6 +2,11 @@
   "name": "slidev-theme-nucl-th",
   "version": "0.0.0",
   "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./styles": "./styles/index.ts"
+  },
   "keywords": [
     "slidev-theme",
     "slidev"

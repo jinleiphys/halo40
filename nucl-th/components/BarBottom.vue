@@ -5,12 +5,14 @@ interface Props {
   title?: string
   author?: string
   meeting?: string
+  meetingShort?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   title: '',
   author: '',
-  meeting: ''
+  meeting: '',
+  meetingShort: ''
 })
 
 // Get slide info from Slidev globals
@@ -34,7 +36,7 @@ const slideInfo = computed(() => {
     </div>
     
     <div class="bar-center">
-      <span v-if="meeting" class="meeting">{{ meeting }}</span>
+      <span v-if="meetingShort || meeting" class="meeting">{{ meetingShort || meeting }}</span>
     </div>
     
     <div class="bar-right">
@@ -63,7 +65,7 @@ const slideInfo = computed(() => {
   padding: 0 1.5rem;
   color: white;
   font-family: var(--slidev-font-sans);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 500;
   z-index: 100;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
@@ -91,6 +93,7 @@ const slideInfo = computed(() => {
   justify-content: center;
   flex: 2;
   text-align: center;
+  overflow: hidden;
 }
 
 .bar-right {
@@ -120,6 +123,11 @@ const slideInfo = computed(() => {
 .meeting {
   font-style: italic;
   opacity: 0.9;
+  color: #FFD700; /* Gold color to stand out */
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .slide-number {

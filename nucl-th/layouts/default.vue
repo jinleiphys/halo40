@@ -5,13 +5,24 @@ import BarBottom from '../components/BarBottom.vue'
 // Get configuration from frontmatter
 const title = $slidev.configs.title || ''
 const meeting = $slidev.configs.meeting || ''
+const meetingShort = $slidev.configs.meetingShort || ''
 
 // Extract first author from authors array or fall back to author field
 const author = computed(() => {
   if ($slidev.configs.authors && Array.isArray($slidev.configs.authors) && $slidev.configs.authors.length > 0) {
-    // Get first author and remove institute notation (^1, ^2, etc.)
     const firstAuthor = $slidev.configs.authors[0]
-    return firstAuthor.split('^')[0].trim()
+    
+    // Check if it's the new object format
+    if (typeof firstAuthor === 'object' && !Array.isArray(firstAuthor)) {
+      // Get the first key (author name) from the object
+      const authorName = Object.keys(firstAuthor)[0]
+      return authorName || ''
+    }
+    
+    // Legacy string format with ^ notation
+    if (typeof firstAuthor === 'string') {
+      return firstAuthor.split('^')[0].trim()
+    }
   }
   return $slidev.configs.author || ''
 })
@@ -27,6 +38,7 @@ const author = computed(() => {
       :title="title"
       :author="author" 
       :meeting="meeting"
+      :meetingShort="meetingShort"
     />
   </div>
 </template>
