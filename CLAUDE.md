@@ -18,6 +18,10 @@ This is a Slidev presentation project for the HALO-40 symposium (International S
 - `npm run export` - Export slides to PDF
 - `cd nucl-th && npm run screenshot` - Export slides as PNG images
 
+### Dependency Management
+- `npm install` - Install/update dependencies (updates package-lock.json)
+- `npm ci` - Clean install from lock file (used in GitHub Actions)
+
 ## Architecture
 
 ### Theme Structure (`./nucl-th/`)
@@ -71,3 +75,17 @@ Two meeting fields are supported:
 
 ### Slide Content
 Main presentation content is in `slides.md` at the project root, configured to use the `./nucl-th` theme.
+
+## Deployment
+
+### GitHub Pages
+- Automatic deployment via GitHub Actions on push to main branch
+- Manual deployment via workflow_dispatch trigger
+- Built presentation available at: `https://[username].github.io/halo40/`
+- Uses `npm ci` for reliable dependency installation
+
+### Font Dependencies
+The project requires font packages in the main package.json for successful builds:
+- `@fontsource/inter`, `@fontsource/crimson-pro`, `@fontsource/jetbrains-mono`
+- Both package.json and package-lock.json must be synchronized
+- Run `npm install` after adding dependencies to update the lock file
