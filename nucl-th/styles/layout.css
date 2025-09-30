@@ -1,0 +1,173 @@
+:root {
+  /* HEP theme inspired colors */
+  --slidev-theme-primary: #0FA3B1;
+  --slidev-theme-secondary: #4EC5D4;
+  --slidev-theme-accent: #146b8c;
+  --slidev-theme-gradient-start: #4EC5D4;
+  --slidev-theme-gradient-end: #146b8c;
+  
+  /* Typography settings */
+  --slidev-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --slidev-font-serif: 'Crimson Pro', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --slidev-font-mono: 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--slidev-theme-gradient-start) 15%, var(--slidev-theme-gradient-end) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Underline utility */
+.underline-text {
+  text-decoration: underline;
+}
+
+/* Balanced typography for large audiences */
+.slidev-layout {
+  font-family: var(--slidev-font-sans);
+  font-size: 20px; /* Moderate increase from default ~16px */
+  line-height: 1.6;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative; /* Enable positioning for subtitle */
+}
+
+.slidev-layout h1 {
+  font-family: var(--slidev-font-serif);
+  font-weight: 700;
+  font-size: 3rem; /* ~48px */
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 0; /* Reset to normal positioning */
+  margin-bottom: 1.5rem;
+  padding-top: 1rem; /* Move content down from top instead */
+}
+
+.slidev-layout h2 {
+  font-family: var(--slidev-font-serif);
+  font-weight: 600;
+  font-size: 2.25rem; /* ~36px */
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-top: 1rem; /* Normal margin */
+  margin-bottom: 1rem;
+}
+
+.slidev-layout h3 {
+  font-family: var(--slidev-font-serif);
+  font-weight: 600;
+  font-size: 1.75rem; /* ~28px */
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.slidev-layout h4 {
+  font-family: var(--slidev-font-serif);
+  font-weight: 600;
+  font-size: 1.5rem; /* ~24px */
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout p {
+  font-size: 1.125rem; /* ~18px - readable but not overwhelming */
+  line-height: 1.6;
+  margin-bottom: 0.75rem; /* Slightly reduced paragraph spacing */
+}
+
+.slidev-layout li {
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.6;
+  margin-bottom: 0.25rem; /* Tighter list item spacing */
+}
+
+.slidev-layout ul, .slidev-layout ol {
+  margin-bottom: 1rem; /* Compact list spacing */
+}
+
+.slidev-layout code,
+.slidev-layout pre {
+  font-family: var(--slidev-font-mono);
+  font-size: 1rem; /* ~16px - good for code readability */
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.slidev-layout table {
+  font-size: 1rem; /* ~16px */
+}
+
+.slidev-layout blockquote {
+  font-size: 1.125rem; /* ~18px */
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    font-size: 3.5rem; /* ~56px - impactful but fits better */
+    font-family: var(--slidev-font-serif);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 + p {
+    font-size: 1.25rem; /* ~20px */
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    font-family: var(--slidev-font-sans);
+    font-weight: 400;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    margin-top: 2rem;
+  }
+
+  /* Enhanced spacing for academic layouts - balanced sizing */
+  .meeting {
+    font-size: 1.75rem; /* ~28px */
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+    font-family: var(--slidev-font-serif);
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .authors {
+    font-size: 1.375rem; /* ~22px */
+    margin-bottom: 1.5rem;
+    font-family: var(--slidev-font-sans);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .date {
+    font-size: 1.125rem; /* ~18px */
+    opacity: 0.75;
+    font-family: var(--slidev-font-sans);
+    font-weight: 400;
+  }
+
+  /* Subtitle text */
+  .subtitle {
+    font-size: 1.375rem; /* ~22px */
+    opacity: 0.8;
+    font-family: var(--slidev-font-sans);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+}
