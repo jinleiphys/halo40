@@ -73,6 +73,8 @@ meetingShort: "HALO-40"
 
 # Exclusive Breakup
 
+- Take 6Li as an example
+
 <div class="text-center">
   <img src="/pics/dA_chans_exclusive.png" class="w-full h-96 object-contain">
 </div>
@@ -81,8 +83,15 @@ meetingShort: "HALO-40"
 
 # Inclusive Breakup
 
+- Take 6Li as an example
+
 <div class="text-center">
-  <img src="/pics/dA_chans_inclusive.png" class="w-full h-96 object-contain">
+  <img src="/pics/dA_chans_inclusive.png" class="w-full h-72 object-contain">
+</div>
+
+<div class="mt-2 space-y-1">
+  <p v-click class="text-lg" style="color: #0FA3B1;"><strong>EBU (Elastic Breakup):</strong> Can be treated in the standard three-body model such as Faddeev/CDCC</p>
+  <p v-click class="text-lg" style="color: #FF6B35;"><strong>NEB (Nonelastic Breakup):</strong> Needs special treatment</p>
 </div>
 
 ---
@@ -125,17 +134,30 @@ function updateUser(id: number, update: Partial<User>) {
 ```
 
 ---
-layout: center
-class: "text-center"
----
 
-# <span class="gradient-text">Thank You</span>
+# Acknowledgments
 
-Questions and Discussion
-
-<TextBox type="default">
-<div class="text-center">
-Contact: nuclear.theory@university.edu<br>
-Visit our research group website for more information
+<div class="absolute top-4 right-4 w-74">
+  <img src="/logo.png" alt="Logo">
 </div>
-</TextBox>
+
+### Collaborators:
+- **Antonio M. Moro** (Universidad de Sevilla)
+
+### Funding Support:
+- National Natural Science Foundation of China
+- Fundamental Research Funds for the Central Universities
+
+<div v-click class="text-center mt-4 text-3xl" style="color:#4A9CF7;">
+Thank you for your attention!
+</div>
+
+<div v-click class="text-center mt-2 text-xl">
+Questions and discussions are welcome
+</div>
+
+<div class="text-center mt-2 text-lg">
+  <p class="mb-1"><strong>SMOOTHIE Code:</strong> <a href="https://smoothie.fewbody.com" style="color: #0FA3B1;">smoothie.fewbody.com</a></p>
+  <p class="mb-1"><strong>Research Group:</strong> <a href="https://www.fewbody.com" style="color: #0FA3B1;">www.fewbody.com</a></p>
+  <p class="mb-1"><strong>Contact:</strong> <a href="mailto:jinlei@fewbody.com" style="color: #0FA3B1;">jinlei@fewbody.com</a></p>
+</div>
