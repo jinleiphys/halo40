@@ -2,12 +2,16 @@
 theme: ./nucl-th
 layout: cover
 title: "SMOOTHIE: A Computational Tool for Nonelastic Breakup Calculations using the Ichimura-Austern-Vincent Formalism"
-authors: 
+authors:
   - "Jin Lei": ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."]
 meeting: "International Symposium Commemorating the 40th Anniversary of the Halo Nuclei (HALO-40), Beijing, October 12–18, 2025."
 meetingShort: "HALO-40"
 # preTitle: "Advances in"
 ---
+
+<div class="absolute top-0 left-0 w-full h-full" style="z-index: -1;">
+  <img src="/pics/background.png" class="opacity-20" style="position: absolute; top: 0; left: 0; width: auto; height: auto; max-width: 50%; max-height: 50%;" />
+</div>
 
 
 
@@ -86,32 +90,147 @@ meetingShort: "HALO-40"
 - Take 6Li as an example
 
 <div class="text-center">
-  <img src="/pics/dA_chans_inclusive.png" class="w-full h-72 object-contain">
-</div>
-
-<div class="mt-2 space-y-1">
-  <p v-click class="text-lg" style="color: #0FA3B1;"><strong>EBU (Elastic Breakup):</strong> Can be treated in the standard three-body model such as Faddeev/CDCC</p>
-  <p v-click class="text-lg" style="color: #FF6B35;"><strong>NEB (Nonelastic Breakup):</strong> Needs special treatment</p>
+  <img src="/pics/dA_chans_inclusive.png" class="w-full h-96 object-contain">
 </div>
 
 ---
 
-# Navigation
+# Study of Inclusive Breakup
 
-Hover on the bottom-left corner to see the navigation's controls panel
+The study of inclusive breakup can be used to understand the following subjects:
 
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+<div class="grid grid-cols-3 gap-4 mt-4">
+  <div class="text-center">
+    <p class="text-lg font-bold mb-2" style="color: #0FA3B1;">Inclusive Spectrum</p>
+    <img src="/pics/Li6inclusive.png" class="w-full h-48 object-contain">
+    <div class="text-sm mt-2 space-y-1 flex flex-col justify-center" style="min-height: 4.5rem;">
+      <p>Clear α band dominates</p>
+      <p>Suggests nonelastic processes</p>
+    </div>
+  </div>
+  <div v-click class="text-center">
+    <p class="text-lg font-bold mb-2" style="color: #EA33F0;">Surrogate Reaction</p>
+    <img src="/pics/surrogate.png" class="w-full h-48 object-contain">
+    <div class="text-sm mt-2 space-y-1 flex flex-col justify-center" style="min-height: 4.5rem;">
+      <p>Study compound nucleus</p>
+      <p>Formation and decay processes</p>
+    </div>
+  </div>
+  <div v-click class="text-center">
+    <p class="text-lg font-bold mb-2" style="color: #FF6B35;">Knockout Reaction</p>
+    <img src="/pics/knockout.png" class="w-full h-48 object-contain">
+    <div class="text-sm mt-2 space-y-1">
+      <p>Study Spectroscopic factor</p>
+      <p>Mostly based on Eikonal approximation</p>
+      <p>Fully quantum model needed</p>
+    </div>
+  </div>
+</div>
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+
+# The Ichimura-Austern-Vincent (IAV) Model
+
+- Fully quantum mechanical model for breakup reactions
+
+<p style="color: #808080;"><em>M. Ichimura, N. Austern, and C. M. Vincent, PRC 32, 431 (1985)</em></p>
+
+<div class="mt-4">
+
+- **Inclusive breakup:**
+$$
+a + A \to b + B^* , \quad \text{where } a = b + x
+$$
+
+</div>
+
+<div v-click class="mt-4">
+
+- **IAV Nonelastic breakup (NEB):**
+  $$
+  \frac{d^2\sigma}{dE_b d\Omega_b}\Big|_\mathrm{NEB}= -\frac{2}{\hbar v_a} \rho_b(E_b)
+  \langle \color{#c90024}{G_x^{(+)}\rho(\vec{k}_b)} \color{black}{|W_x|}  \color{#c90024}{G_x^{(+)}\rho(\vec{k}_b)} \color{black}{\rangle}
+  $$
+
+</div>
+
+<div v-click class="ml-8">
+
+  - where $\color{#c90024}{G_x^{(+)}\rho(\vec{k}_b)}$: wave function in $x+A$ channel
+
+</div>
+
+<div v-click class="ml-8">
+
+  - $\rho(\vec{k}_b)$: source term ($x$ from $a$), $\langle \vec{r}_x | \rho(\vec{k}_b)\rangle =  \langle \vec{r}_x \chi_b^{(-)} | V | \Psi^{(+)} \rangle$
+
+</div>
+
+<div v-click class="ml-8">
+
+  - DWBA approximation: $\Psi^{(+)} \approx \chi_a^{(+)} \phi_a$
+
+</div>
+
+---
+
+# SMOOTHIE Code
+
+<span style="color: #FF8C00;">**S**</span>cattering <span style="color: #FF8C00;">**M**</span>odel of <span style="color: #FF8C00;">**O**</span>ptical <span style="color: #FF8C00;">**O**</span>perator <span style="color: #FF8C00;">**Th**</span>eory for <span style="color: #FF8C00;">**I**</span>chimura-Austern-Vincent <span style="color: #FF8C00;">**E**</span>quations
+
+<div class="absolute bottom-20 right-8 w-120">
+  <img src="/pics/Generator.png" class="w-full h-auto object-contain rounded-lg shadow-lg border border-gray-300">
+</div>
+
+<div class="mt-6">
+
+**Key Features:**
+- Modern Fortran implementation of IAV formalism
+- Calculates nonelastic breakup cross sections
+- Supports multiple optical potential models
+- Web-based input generator available
+
+</div>
+
+<div v-click class="mt-6">
+
+**Availability:**
+- Website: [smoothie.fewbody.com](https://smoothie.fewbody.com)
+- Open source (MIT License)
+- Platform: Linux, macOS, Windows
+
+</div>
+
+---
+
+# SMOOTHIE Implementation
+
+<div class="grid gap-8" style="grid-template-columns: 1fr 1.5fr;">
+
+<div>
+
+**Key Features:**
+- Advanced IAV formalism
+- Lagrange-mesh R-matrix
+- Green's function approach
+- Intrinsic spins support
+- HPC optimized
+
+</div>
+
+<div v-click>
+
+**Modular Architecture:**
+- **general_modules/** - Precision, constants, systems, channels
+- **mesh_modules/** - Numerical integration, Gaussian quadrature
+- **pot_modules/** - Woods-Saxon, KD02, CH89, external files
+- **pw_modules/** - Partial wave decomposition: Coulomb functions, spherical harmonics, Clebsch-Gordan coefficients
+- **cm2lab/** - Center-of-mass to lab frame conversion
+
+</div>
+
+</div>
+
 ---
 
 # Code
@@ -141,18 +260,18 @@ function updateUser(id: number, update: Partial<User>) {
   <img src="/logo.png" alt="Logo">
 </div>
 
-### Collaborators:
+### Collaborator:
 - **Antonio M. Moro** (Universidad de Sevilla)
 
 ### Funding Support:
 - National Natural Science Foundation of China
 - Fundamental Research Funds for the Central Universities
 
-<div v-click class="text-center mt-4 text-3xl" style="color:#4A9CF7;">
+<div class="text-center mt-4 text-3xl" style="color:#4A9CF7;">
 Thank you for your attention!
 </div>
 
-<div v-click class="text-center mt-2 text-xl">
+<div class="text-center mt-2 text-xl">
 Questions and discussions are welcome
 </div>
 
