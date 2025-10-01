@@ -287,8 +287,7 @@ Use (d,pX) reaction to populate <sup>239</sup>U states and measure fission decay
 
 <div class="grid grid-cols-2 gap-8 mt-4">
   <div>
-    <img src="/pics/dp_surrogate.png" class="w-full h-auto">
-    <p class="text-sm text-center mt-2">Fission probability vs excitation energy</p>
+    <img src="/pics/dp_surrogate.png" class="w-97 h-auto">
   </div>
   <div>
 
