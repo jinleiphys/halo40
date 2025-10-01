@@ -9,8 +9,8 @@ This is a Slidev presentation project for the HALO-40 symposium (International S
 ## Key Commands
 
 ### Development
-- `npm run dev` - Start development server from root (uses ./nucl-th theme)
-- `cd nucl-th && npm run dev` - Start development server from theme directory (recommended for theme development)
+- `npm run dev` - Start development server from root directory (recommended - uses ./nucl-th theme)
+- `cd nucl-th && npm run dev` - Start development server from theme directory (uses example.md)
 - `cd nucl-th && npx slidev slides.md --open` - Run specific slides file from theme directory
 
 ### Build and Export
@@ -20,14 +20,22 @@ This is a Slidev presentation project for the HALO-40 symposium (International S
 
 ### Dependency Management
 - `npm install` - Install/update dependencies (updates package-lock.json)
-- `npm ci` - Clean install from lock file (used in GitHub Actions)
+- `npm ci` - Clean install from lock file (used in GitHub Actions as `nci` via @antfu/ni)
 
 ## Architecture
+
+### Project Structure
+- **`slides.md`** - Main presentation content (root level)
+- **`pics/`** - Image assets for slides
+- **`pages/`** - Additional slide pages
+- **`snippets/`** - Code snippets for presentations
+- **`nucl-th/`** - Custom Slidev theme directory
 
 ### Theme Structure (`./nucl-th/`)
 The custom `nucl-th` theme provides academic presentation styling with these key components:
 
-- **`index.ts`** - Main theme entry point that imports styles
+- **`package.json`** - Theme configuration with scripts and dependencies
+- **`index.ts`** - Main theme entry point that imports styles and exports components
 - **`styles/index.ts`** - Style imports (fonts, layout CSS)
 - **`styles/layout.css`** - Main theme styling with academic color scheme and typography
 - **`layouts/`** - Vue layout components:
@@ -37,6 +45,7 @@ The custom `nucl-th` theme provides academic presentation styling with these key
 - **`components/`** - Reusable Vue components:
   - `BarBottom.vue` - Bottom navigation bar with author, title, meeting info
   - `TextBox.vue` - Styled content boxes for highlights
+- **`example.md`** - Theme example slides for development
 
 ### Author Format
 The theme supports a custom author format for academic presentations:
@@ -64,9 +73,10 @@ Two meeting fields are supported:
 ## Development Notes
 
 ### Theme Loading
-- When developing the theme itself, work from the `nucl-th/` directory
-- The theme uses relative imports and expects to be run from its own directory for proper asset loading
+- **Always run development server from the root directory** (`npm run dev`) to avoid component resolution issues
+- The theme uses relative imports and expects proper file structure
 - Logo file is located at `nucl-th/logo.png`
+- **Critical**: Avoid having a `components/` directory at the root level as it conflicts with theme component resolution
 
 ### CSS Customizations
 - Content positioning can be adjusted via `.slidev-layout` padding and h1 margins in `layout.css`
@@ -82,10 +92,24 @@ Main presentation content is in `slides.md` at the project root, configured to u
 - Automatic deployment via GitHub Actions on push to main branch
 - Manual deployment via workflow_dispatch trigger
 - Built presentation available at: `https://[username].github.io/halo40/`
-- Uses `npm ci` for reliable dependency installation
+- Uses `@antfu/ni` package manager (commands: `nci` for install, `nr build` for build)
+- Base path is automatically set to repository name during GitHub Actions build
 
 ### Font Dependencies
 The project requires font packages in the main package.json for successful builds:
 - `@fontsource/inter`, `@fontsource/crimson-pro`, `@fontsource/jetbrains-mono`
 - Both package.json and package-lock.json must be synchronized
 - Run `npm install` after adding dependencies to update the lock file
+
+## Troubleshooting
+
+### Component Resolution Issues
+If you encounter errors like "ENOENT: no such file or directory, open '/components/BarBottom.vue'":
+- Ensure no `components/` directory exists at the root level
+- Move any root-level components to `components_backup/` or remove them
+- Always run development from root directory with `npm run dev`
+
+### Theme Development
+- Theme has its own package.json and dependencies in `nucl-th/`
+- Theme scripts: `dev` (uses example.md), `build`, `export`, `screenshot`
+- Theme fonts are declared in both theme and root package.json for deployment compatibility

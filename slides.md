@@ -20,21 +20,21 @@ date: "October 16, 2025"
 
 # Outline
 
-<div class="mt-12 space-y-5 text-2xl">
+<ol class="mt-12 space-y-5 text-2xl">
 
-1. **Motivation** - Breakup reactions in nuclear physics
+<li><strong>Motivation</strong> - Breakup reactions in nuclear physics</li>
 
-2. **Breakup Classification** - Exclusive vs. Inclusive breakup
+<li><strong>Breakup Classification</strong> - Exclusive vs. Inclusive breakup</li>
 
-3. **Theoretical Framework** - Ichimura-Austern-Vincent (IAV) formalism
+<li><strong>Theoretical Framework</strong> - Ichimura-Austern-Vincent (IAV) formalism</li>
 
-4. **SMOOTHIE Code** - Implementation and features
+<li><strong>SMOOTHIE Code</strong> - Implementation and features</li>
 
-5. **Applications** - Three case studies demonstrating the code
+<li><strong>Applications</strong> - Three case studies demonstrating the code</li>
 
-6. **Summary** - Key results and future directions
+<li><strong>Summary</strong> - Key results and future directions</li>
 
-</div>
+</ol>
 
 ---
 

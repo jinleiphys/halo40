@@ -95,6 +95,17 @@
   margin-bottom: 1rem; /* Compact list spacing */
 }
 
+/* Ensure ordered list numbers display properly */
+.slidev-layout ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 2rem;
+}
+
+.slidev-layout ol li {
+  display: list-item;
+}
+
 .slidev-layout code,
 .slidev-layout pre {
   font-family: var(--slidev-font-mono);
