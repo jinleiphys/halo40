@@ -125,8 +125,8 @@ The study of inclusive breakup can be used to understand the following subjects:
     <p class="text-lg font-bold mb-2" style="color: #0FA3B1;">Inclusive Spectrum</p>
     <img src="/pics/Li6inclusive.png" class="w-full h-48 object-contain">
     <div class="text-sm mt-2 space-y-1 flex flex-col justify-center" style="min-height: 4.5rem;">
-      <p>Clear α band dominates</p>
-      <p>Suggests nonelastic processes</p>
+      <p>• Clear α band dominates</p>
+      <p>• Suggests nonelastic processes</p>
     </div>
   </div>
   <div v-click class="text-center">
