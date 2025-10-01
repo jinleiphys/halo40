@@ -6,6 +6,7 @@ authors:
   - "Jin Lei": ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."]
 meeting: "International Symposium Commemorating the 40th Anniversary of the Halo Nuclei (HALO-40), Beijing, October 12–18, 2025."
 meetingShort: "HALO-40"
+date: "October 16, 2025"
 # preTitle: "Advances in"
 ---
 
@@ -233,24 +234,67 @@ $$
 
 ---
 
-# Code
+# Application 1: Halo-Induced Reactions
 
-Use code snippets and get the highlighting directly!
+**Reaction:** $^{11}$Be + $^{64}$Zn at $E_{\text{lab}}$ = 28.7 MeV
 
-```ts
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+<div class="grid grid-cols-2 gap-6 mt-6">
+  <div class="text-center">
+    <img src="/pics/be11zn_dsdwc_n2.png" class="w-full h-80 object-contain">
+  </div>
+  <div v-click class="text-center">
+    <img src="/pics/dsdwde_n2_cdcc.png" class="w-full h-80 object-contain">
+  </div>
+</div>
 
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
+<div class="mt-4 text-sm" style="color: #808080;">
+A. Di Pietro, A.M. Moro, Jin Lei and R. de Diego, Physics Letters B 798, 134954 (2019)
+</div>
+
+---
+
+# Application 2: Surrogate Reactions
+
+**Reaction:** $^{238}$U(d,p) to study fission probabilities of n+$^{238}$U
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+  <div>
+    <img src="/pics/dp_surrogate.png" class="w-full h-auto">
+  </div>
+  <div class="flex flex-col justify-center">
+    <p class="text-lg mb-4">Corrected fission probability:</p>
+    <div class="text-left">
+
+$$
+P_\chi^{\mathrm{corr}}\left(E^*\right)=\frac{P_\chi^{\mathrm{meas}}\left(E^*\right) \sigma_{\mathrm{TB}}\left(E^*\right)}{\sigma_{\mathrm{BF}}\left(E^*\right)}
+$$
+
+</div>
+    <div class="mt-6 text-sm" style="color: #808080;">
+      Q. Ducasse, et al., Phys. Rev. C 94, 024614 (2016)
+    </div>
+  </div>
+</div>
+
+---
+
+# Application 3: Knockout Reactions
+
+<div class="grid grid-cols-2 gap-8 mt-6">
+  <div class="flex flex-col justify-center">
+    <p class="text-xl mb-4"><strong>One nucleon breakup reactions:</strong></p>
+    <div class="ml-6 space-y-2">
+      <p>• <sup>14</sup>O at 53A MeV on <sup>9</sup>Be target</p>
+      <p>• <sup>16</sup>C at 75A MeV on <sup>9</sup>Be target</p>
+    </div>
+    <div class="mt-6 text-sm" style="color: #808080;">
+      Jin Lei and Angela Bonaccorso, Physics Letters B 813, 136032 (2021)
+    </div>
+  </div>
+  <div class="flex items-center">
+    <img src="/pics/knock_com_data.png" class="w-full object-contain" style="max-height: 425px;">
+  </div>
+</div>
 
 ---
 

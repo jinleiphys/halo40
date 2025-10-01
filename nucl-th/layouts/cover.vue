@@ -7,6 +7,7 @@ interface Props {
   meeting?: string
   preTitle?: string
   preDate?: boolean
+  date?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -14,7 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
   authors: () => [],
   meeting: '',
   preTitle: '',
-  preDate: true
+  preDate: true,
+  date: undefined
 })
 
 // Process authors into names and institutes
@@ -72,8 +74,11 @@ const affiliationsList = computed(() => {
   return []
 })
 
-// Generate current date
+// Generate current date or use provided date
 const currentDate = computed(() => {
+  if (props.date) {
+    return props.date
+  }
   return new Date().toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
