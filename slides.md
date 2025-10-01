@@ -13,24 +13,77 @@ meetingShort: "HALO-40"
 
 ---
 
-# Nuclear Theory Theme Features
+# The reaction of two body structured projectile
 
-This theme provides academic presentation capabilities inspired by the HEP theme. Key features include:
+<div class="grid grid-cols-2 gap-6 h-96">
+  <div class="text-center">
+    <img src="/pics/reaction.png" class="w-full h-full object-contain mb-2">
+  </div>
+  <div class="grid grid-rows-4 gap-4">
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #EA33F0;">Extract optical potential, rms radius, density distributions</p>
+      </div>
+    </div>
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #EA33F0;">Extract spin, parity, spectroscopic factors example: <sup>132</sup>Sn(d,p)<sup>133</sup>Sn</p>
+      </div>
+    </div>
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #EA33F0;">Study nuclear dynamics properties of halo nuclei</p>
+      </div>
+    </div>
+    <div v-click>
+      <div class="text-left space-y-1">
+        <p class="text-xl" style="color: #4A9CF7;">Provide energy for star burning synthesis of elements</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-- 🔬 **Academic Layout** - Professional cover slides with author affiliations
-- 🎨 **Gradient Styling** - Beautiful gradient text effects for headings
-- 📊 **TextBox Component** - Flexible text containers for highlights and notes
-- 🏛️ **Institution Support** - Author names with superscript institute numbers
-- 📅 **Auto-dating** - Automatic date generation for presentations
-- 🎯 **Conference Ready** - Meeting and conference information display
+<div v-click class="text-center" style="margin-top: -1rem;">
+  <p class="text-2xl" style="color: #FF6B35;">
+    <strong>Breakup reaction is very important:</strong><br>
+    provides both dynamics information and weakly bound projectile properties
+  </p>
+</div>
 
-<TextBox type="info">
-This is an example of the TextBox component with info styling. Perfect for highlighting important information!
-</TextBox>
+---
 
-<TextBox type="warning">
-Warning-style text boxes are great for emphasizing critical points.
-</TextBox>
+# Breakup Classification
+
+<div class="text-center mt-8">
+  <p class="text-3xl" style="color: #0FA3B1;">From the experimental point of view, breakup can be classified into two different types</p>
+</div>
+
+<div class="grid grid-cols-2 gap-8 mt-12">
+  <div class="text-center">
+    <p class="text-2xl font-bold mb-4" style="color: #EA33F0;">Exclusive Breakup</p>
+    <img src="/pics/exclusive.png" class="w-full h-64 object-contain">
+  </div>
+  <div class="text-center">
+    <p class="text-2xl font-bold mb-4" style="color: #EA33F0;">Inclusive Breakup</p>
+    <img src="/pics/inclusive.png" class="w-full h-64 object-contain">
+  </div>
+</div>
+
+---
+
+# Exclusive Breakup
+
+<div class="text-center">
+  <img src="/pics/dA_chans_exclusive.png" class="w-full h-96 object-contain">
+</div>
+
+---
+
+# Inclusive Breakup
+
+<div class="text-center">
+  <img src="/pics/dA_chans_inclusive.png" class="w-full h-96 object-contain">
+</div>
 
 ---
 
