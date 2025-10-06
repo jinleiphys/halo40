@@ -62,7 +62,7 @@ date: "October 16, 2025"
     </div>
     <div v-click>
       <div class="text-left space-y-1">
-        <p class="text-xl" style="color: #0FA3B1;">• Provide energy for star burning synthesis of elements</p>
+        <p class="text-xl" style="color: #0FA3B1;">• Provide energy of star burning and synthesis of elements</p>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ date: "October 16, 2025"
 
 <div v-click class="text-center" style="margin-top: -1rem;">
   <p class="text-2xl" style="color: #146b8c;">
-    <strong>Breakup reaction is very important:</strong><br>
+    <strong>Breakup reactions are very important:</strong><br>
     provides both dynamics information and weakly bound projectile properties
   </p>
 </div>
@@ -125,7 +125,7 @@ The study of inclusive breakup can be used to understand the following subjects:
     <p class="text-lg font-bold mb-2" style="color: #0FA3B1;">Inclusive Spectrum</p>
     <img src="/pics/Li6inclusive.png" class="w-full h-48 object-contain">
     <div class="text-sm mt-2 space-y-1 flex flex-col justify-center" style="min-height: 4.5rem;">
-      <p>• Clear α band dominates</p>
+      <p>• α band clearly dominates</p>
       <p>• Suggests nonelastic processes</p>
     </div>
   </div>
@@ -133,7 +133,7 @@ The study of inclusive breakup can be used to understand the following subjects:
     <p class="text-lg font-bold mb-2" style="color: #0FA3B1;">Surrogate Reaction</p>
     <img src="/pics/surrogate.png" class="w-full h-48 object-contain">
     <div class="text-sm mt-2 space-y-1 flex flex-col justify-center" style="min-height: 4.5rem;">
-      <p>• Study compound nucleus</p>
+      <p>• Indirect study of compound nucleus reactions</p>
       <p>• Formation and decay processes</p>
     </div>
   </div>
@@ -141,7 +141,7 @@ The study of inclusive breakup can be used to understand the following subjects:
     <p class="text-lg font-bold mb-2" style="color: #0FA3B1;">Knockout Reaction</p>
     <img src="/pics/knockout.png" class="w-full h-48 object-contain">
     <div class="text-sm mt-2 space-y-1">
-      <p>• Study Spectroscopic factor</p>
+      <p>• Extraction of spectroscopic factors</p>
       <p>• Mostly based on Eikonal approximation</p>
       <p>• Fully quantum model needed</p>
     </div>
