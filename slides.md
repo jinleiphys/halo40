@@ -4,7 +4,7 @@ layout: cover
 title: "SMOOTHIE: A Computational Tool for Nonelastic Breakup Calculations using the Ichimura-Austern-Vincent Formalism"
 titleTemplate: "%s"
 authors:
-  - "Jin Lei": ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."]
+  - "Jin Lei (金 磊)": ["School of Physics Science and Engineering, Tongji University, Shanghai 200092, China."]
 meeting: "International Symposium Commemorating the 40th Anniversary of the Halo Nuclei (HALO-40), Beijing, October 12–18, 2025."
 meetingShort: "HALO-40"
 date: "October 16, 2025"
