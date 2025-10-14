@@ -423,3 +423,12 @@ Questions and discussions are welcome
   <p class="mb-1"><strong>Research Group:</strong> <a href="https://www.fewbody.com" style="color: #0FA3B1;">www.fewbody.com</a></p>
   <p class="mb-1"><strong>Contact:</strong> <a href="mailto:jinlei@fewbody.com" style="color: #0FA3B1;">jinlei@fewbody.com</a></p>
 </div>
+
+---
+
+# Access This Presentation
+
+<div class="flex flex-col items-center mt-12">
+  <p class="text-3xl mb-8" style="color: #0FA3B1;"><strong>Scan the QR code to access this presentation</strong></p>
+  <img src="/pics/qrcode_halo.png" class="w-80 h-80 object-contain">
+</div>
