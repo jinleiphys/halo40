@@ -428,7 +428,12 @@ Questions and discussions are welcome
 
 # Access This Presentation
 
-<div class="flex flex-col items-center mt-12">
-  <p class="text-3xl mb-8" style="color: #0FA3B1;"><strong>Scan the QR code to access this presentation</strong></p>
-  <img src="/pics/qrcode_halo.png" class="w-80 h-80 object-contain">
+<div class="grid grid-cols-2 gap-8 mt-8">
+  <div class="flex flex-col items-center justify-center">
+    <p class="text-2xl mb-6" style="color: #0FA3B1;"><strong>Scan the QR code to access this presentation</strong></p>
+    <img src="/pics/qrcode_halo.png" class="w-64 h-64 object-contain">
+  </div>
+  <div class="flex items-center justify-center">
+    <video src="/pics/merged_output.mp4" autoplay loop muted controls class="w-full h-auto" style="max-height: 400px;"></video>
+  </div>
 </div>
